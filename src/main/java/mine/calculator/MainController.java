@@ -145,7 +145,12 @@ public class MainController {
                         return;
                     }
                     second_number = Double.parseDouble(temp_input);
+                    if(second_number == 0d && Sign == '÷'){
+                        input.setText("");
+                        count_number--;
+                        return;
 
+                    }
 
                     number.setText("");
                     input.setText(String.valueOf(Answer(Sign)));
