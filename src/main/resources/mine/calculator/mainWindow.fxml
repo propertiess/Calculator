@@ -12,19 +12,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: #ACCAE4FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mine.calculator.MainController">
+<AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: #ACCAE4FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mine.calculator.MainController">
+
    <children>
-      <Text fx:id="number" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0">
+      <Text fx:id="number" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="182.0">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Text>
       <TextField fx:id="input" alignment="CENTER_RIGHT" editable="false" layoutX="108.0" prefHeight="79.0" prefWidth="343.0" style="-fx-background-color: #ACCAE4FF; -fx-focus-color: transparent; -fx-background-insets: -1.4, 0, 1, 2; -fx-display-caret: false; -fx-text-fill: #000;">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="Roboto Bold" size="36.0" />
          </font>
          <cursor>
-            <Cursor fx:constant="NONE" />
+            <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
       <VBox layoutX="-9.0" layoutY="79.0" prefHeight="370.0" prefWidth="463.0" style="-fx-background-color: #ACCAE4FF;">
@@ -44,9 +45,9 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="cebtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="CE" wrapText="true">
+                  <Button fx:id="cebtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="CE" wrapText="true">
                      <font>
-                        <Font size="21.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -55,33 +56,33 @@
                         <Insets left="15.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="cbtn" defaultButton="true" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="C" wrapText="true" GridPane.columnIndex="1">
+                  <Button fx:id="cbtn" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="C" wrapText="true" GridPane.columnIndex="1">
                      <font>
-                        <Font size="21.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="divbtn" defaultButton="true" mnemonicParsing="false" prefHeight="83.0" prefWidth="156.0" style="-fx-background-color: #CEE0F4FF; -fx-text-fill: #000; -fx-background-radius: 10;" text="÷" wrapText="true" GridPane.columnIndex="3">
+                  <Button fx:id="divbtn" mnemonicParsing="false" prefHeight="83.0" prefWidth="156.0" style="-fx-background-color: #CEE0F4FF; -fx-text-fill: #000; -fx-background-radius: 10;" text="÷" wrapText="true" GridPane.columnIndex="3">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="delbtn" defaultButton="true" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="DEL" wrapText="true" GridPane.columnIndex="2">
+                  <Button fx:id="delbtn" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="DEL" wrapText="true" GridPane.columnIndex="2">
                      <font>
-                        <Font size="21.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="sevenbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="7" wrapText="true" GridPane.rowIndex="1">
+                  <Button fx:id="sevenbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="7" wrapText="true" GridPane.rowIndex="1">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -90,33 +91,33 @@
                         <Insets left="15.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="eightbtn" defaultButton="true" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="eightbtn" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="multbtn" defaultButton="true" mnemonicParsing="false" prefHeight="83.0" prefWidth="156.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="×" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <Button fx:id="multbtn" mnemonicParsing="false" prefHeight="83.0" prefWidth="156.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="×" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="ninebtn" defaultButton="true" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="9" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button fx:id="ninebtn" mnemonicParsing="false" prefHeight="160.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="9" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="fourbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="4" wrapText="true" GridPane.rowIndex="2">
+                  <Button fx:id="fourbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="4" wrapText="true" GridPane.rowIndex="2">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -125,9 +126,9 @@
                         <Insets left="15.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="fivebtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="5" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button fx:id="fivebtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="5" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -136,9 +137,9 @@
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="sixbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="6" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button fx:id="sixbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="6" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -147,9 +148,9 @@
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="subbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="—" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <Button fx:id="subbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="-" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
-                        <Font size="19.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -158,9 +159,9 @@
                         <Insets left="5.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="onebtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="1" wrapText="true" GridPane.rowIndex="3">
+                  <Button fx:id="onebtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="1" wrapText="true" GridPane.rowIndex="3">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -169,9 +170,9 @@
                         <Insets left="15.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="twobtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button fx:id="twobtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -180,9 +181,9 @@
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="threebtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="3" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Button fx:id="threebtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="3" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -191,9 +192,9 @@
                         <Insets left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="sumbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="+" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <Button fx:id="sumbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="+" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -202,9 +203,9 @@
                         <Insets left="5.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="procentbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="\%" wrapText="true" GridPane.rowIndex="4">
+                  <Button fx:id="procentbtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="\%" wrapText="true" GridPane.rowIndex="4">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -213,9 +214,9 @@
                         <Insets bottom="10.0" left="15.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="zerobtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button fx:id="zerobtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #FAFAFA;" text="0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="Roboto Bold" size="27.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -224,9 +225,9 @@
                         <Insets bottom="10.0" left="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="combtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="," wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Button fx:id="combtn" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="," wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
@@ -237,7 +238,7 @@
                   </Button>
                   <Button fx:id="equalbtn" defaultButton="true" mnemonicParsing="false" prefHeight="154.0" prefWidth="119.0" style="-fx-background-color: #CEE0F4FF; -fx-background-radius: 10;" text="=" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="Roboto" size="21.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
