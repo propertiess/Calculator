@@ -20,7 +20,7 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Text>
-      <TextField fx:id="input" alignment="CENTER_RIGHT" editable="false" layoutX="108.0" prefHeight="79.0" prefWidth="343.0" style="-fx-background-color: #ACCAE4FF; -fx-focus-color: transparent; -fx-background-insets: -1.4, 0, 1, 2; -fx-display-caret: false; -fx-text-fill: #000;">
+      <TextField fx:id="input" alignment="BOTTOM_RIGHT" editable="false" layoutX="108.0" prefHeight="79.0" prefWidth="343.0" style="-fx-background-color: #ACCAE4FF; -fx-focus-color: transparent; -fx-background-insets: -1.4, 0, 1, 2; -fx-display-caret: false; -fx-text-fill: #000;">
          <font>
             <Font name="Roboto Bold" size="36.0" />
          </font>

@@ -27,7 +27,7 @@ public class MainController {
     @FXML
     private Text number;
 
-    // Output
+    // Input and output
     @FXML
     private TextField input;
 
@@ -45,20 +45,20 @@ public class MainController {
     void initialize() {
         Button [] numbers = new Button[] { zerobtn, onebtn, twobtn, threebtn, fourbtn,
                 fivebtn, sixbtn, sevenbtn, eightbtn, ninebtn, combtn};
+
         Button [] math_operation = new Button[] { divbtn, equalbtn,
                  sumbtn, subbtn, multbtn};
-        Button [] clear_operation = new Button[] { cbtn, cebtn,delbtn};
-        for(var i : numbers){
-            ButtonNumber(i);
-        }
-        for(var i : math_operation){
-            ButtonMathOperation(i);
-        }
-        for(var i : clear_operation){
-            ButtonClearOperation(i);
-        }
 
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, this::KeyboardClicked);
+        Button [] clear_operation = new Button[] { cbtn, cebtn,delbtn};
+
+        for(var i : numbers) ButtonNumber(i);
+
+        for(var i : math_operation) ButtonMathOperation(i);
+
+        for(var i : clear_operation) ButtonClearOperation(i);
+
+
+        scene.addEventHandler(KeyEvent.KEY_RELEASED, this::KeyboardReleased);
 
 
 
@@ -68,12 +68,13 @@ public class MainController {
             String temp_input = input.getText();
             try {
                 if(Integer.parseInt(temp_input) >= 0d) {
-                    addSign(".");
+                    addSymbol(".");
             }
             } catch (NumberFormatException e){
                 System.out.println("NumberFormatExcept");
             }
         });
+
         procentbtn.setOnAction(event -> {
 
             try {
@@ -95,6 +96,7 @@ public class MainController {
 
 
     // ButtonMathOperation get event click on math operations button
+
     private void ButtonMathOperation(Button math_operation){
         math_operation.setOnAction(event -> {
             count_number++;
@@ -138,6 +140,7 @@ public class MainController {
                     String temp_input = input.getText();
                     String temp_sign = math_operation.getText();
 
+
                     if(temp_sign.charAt(0) != '=') {
                         Sign = temp_sign.charAt(0);
                         number.setText(first_number + "\n" + Sign);
@@ -145,6 +148,7 @@ public class MainController {
                         return;
                     }
                     second_number = Double.parseDouble(temp_input);
+
                     if(second_number == 0d && Sign == '÷'){
                         input.setText("");
                         count_number--;
@@ -168,6 +172,7 @@ public class MainController {
 
         });
     }
+
     // ButtonClearOperation get event click on clear operations button
 
     private void ButtonClearOperation(Button clear_operation){
@@ -200,6 +205,7 @@ public class MainController {
         });
 
     }
+
     // ButtonNumber get event click on numbers button
 
     private void ButtonNumber(Button button){
@@ -209,13 +215,13 @@ public class MainController {
             String temp = button.getText();
 
             System.out.println(temp);
-            addSign(temp);
+            addSymbol(temp);
         });
 
     }
 
-    // addSign add symbol on input
-    private void addSign(String s) {
+    // addSymbol add symbol on input
+    private void addSymbol(String s) {
         input.appendText(s);
     }
 
@@ -239,7 +245,8 @@ public class MainController {
         return 0;
     }
 
-    private void KeyboardClicked(KeyEvent keyEvent) {
+    // KeyboardReleased get keyEvent and do some operations
+    private void KeyboardReleased(KeyEvent keyEvent) {
         switch (keyEvent.getText()) {
             case "0" -> zerobtn.fire();
             case "1" -> onebtn.fire();
@@ -258,7 +265,6 @@ public class MainController {
             case "/" -> divbtn.fire();
 
             case "." -> combtn.fire();
-            case "SHIFT %" -> procentbtn.fire();
             default -> {
 
             }
